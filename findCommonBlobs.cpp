@@ -14,15 +14,15 @@ void showHelp(void) {
 }
 
 string removeMisc(string s) {
-    int pos = s.find("|");
-    if (pos == -1) {
-        int pos2 = s.find("-");
-        if (pos2 == 0) {
-            return s.erase(pos2, 1);
-        }
+    int pos1 = s.find("|");
+    int pos2 = s.find("-");
+    string ret;
+    if (pos1 == -1 && pos2 == 0) {
+        return s.erase(pos2, 1);
+    } else if (pos1 == -1 && pos2 != 0) {
         return s;
     }
-    return s.erase(pos, s.length() - pos);
+    return s.erase(pos1, s.length() - pos1).erase(pos2, 1);
 }
 
 int main(int argc, char* argv[]) {

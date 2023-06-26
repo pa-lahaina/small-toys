@@ -16,7 +16,6 @@ void showHelp(void) {
 string removeMisc(string s) {
     int pos1 = s.find("|");
     int pos2 = s.find("-");
-    string ret;
     if (pos1 == -1 && pos2 == 0) {
         return s.erase(pos2, 1);
     } else if (pos1 == -1 && pos2 != 0) {

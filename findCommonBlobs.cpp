@@ -20,6 +20,8 @@ string removeMisc(string s) {
         return s.erase(pos2, 1);
     } else if (pos1 == -1 && pos2 != 0) {
         return s;
+    } else if (pos1 != -1 && pos2 != 0) {
+        return s.erase(pos1, s.length() - pos1);
     }
     return s.erase(pos1, s.length() - pos1).erase(pos2, 1);
 }

@@ -26,6 +26,14 @@ string removeMisc(string s) {
     return s.erase(pos1, s.length() - pos1).erase(pos2, 1);
 }
 
+int isSection(string s) {
+    int pos1 = s.find("#");
+    if (pos1 == 0) {
+        return 1;
+    }
+    return 0;
+}
+
 int main(int argc, char* argv[]) {
     int j = 0;
     string s1;
@@ -45,12 +53,15 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    while (file1 >> s1) {
+    while (getline(file1,s1)) {
+        if (isSection(s1) == 1 || s1.length() == 0) {
+            continue;
+        }
         s1 = removeMisc(s1);
         filesMap[s1] = "1";
     }
 
-    while (file2 >> s1) {
+    while (getline(file2,s1)) {
         s1 = removeMisc(s1);
         for (const auto& fiterator : filesMap) {
             if (fiterator.first == s1) {

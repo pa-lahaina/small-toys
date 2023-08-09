@@ -1,0 +1,15 @@
+# Blobs extracted from xxxdevice xxxversion
+
+# Section 1
+/vendor/lib64/libikun.so
+/vendor/lib64/libbilibili.so
+/vendor/lib64/libfcitx.so.5:/vendor/lib64/libfcitx5.so
+/vendor/lib64/libcxx.so
+/vendor/lib64/libcalifornia.so
+
+# Section 2 - from xxxrevision
+/vendor/lib64/libstdcxx.so|f403565ed737397e48d92def7033fcdbba6a70e6
+/vendor/lib64/libexec.so|da39a3ee5e6b4b0d3255bfef95601890afd80709
+
+# Section 3
+/product/priv-app/com.hypergryph.arknights.apk

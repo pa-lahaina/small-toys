@@ -18,11 +18,11 @@ void showHelp(void) {
     cout << endl;
     cout << "Allowed Options: " << endl;
     cout << "   -h | --help         -   Show this message" << endl;
-    cout << "   -i | --inexisted    -   Let the program find the missing parts of file2 relative "
-            "to file1"
+    cout << "   -i | --inexisted    -   Let the program find the missing parts of file1 relative "
+            "to file2"
          << endl;
-    cout << "   -d | --duplicated   -   Let the program find the duplicated parts of file2 "
-            "relative to file1"
+    cout << "   -d | --duplicated   -   Let the program find the duplicated parts of file1 "
+            "relative to file2"
          << endl;
 }
 
